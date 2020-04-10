@@ -1,3 +1,5 @@
-### Devops with Docker https://devopswithdocker.com/
+# Devops with Docker
 
-## Tracking my exercises!
+#### Tracking my exercises (and hopefully earning 3 ECTS!)
+
+https://devopswithdocker.com/
