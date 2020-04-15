@@ -1,0 +1,2 @@
+docker run -p 1234:80 -it devopsdockeruh/ports_exercise
+curl http://localhost:1234 >> output.txt
