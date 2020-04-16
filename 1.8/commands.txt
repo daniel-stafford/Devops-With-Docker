@@ -1,4 +1,4 @@
 touch logs.txt
-docker run -v "\$(pwd)/logs.txt":/usr/app/logs.txt devopsdockeruh/first_volume_e
+docker run -v "$(pwd)/logs.txt":/usr/app/logs.txt devopsdockeruh/first_volume_e
 
-_Note: I added quotes to \$(pwd) due to spaces in my absolute file path, /Users/danielstafford/Documents/School/University of Helsinki/Docker-with-Deveops/1.8)_
+_Note: I added quotes to $(pwd) due to spaces in my absolute file path, /Users/danielstafford/Documents/School/University of Helsinki/Docker-with-Deveops/1.8)_
