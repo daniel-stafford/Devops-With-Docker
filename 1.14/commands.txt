@@ -1,0 +1,2 @@
+docker build . -t rails-example
+docker -p 3000:3000 -it rails-example:latest
