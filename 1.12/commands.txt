@@ -1,0 +1,4 @@
+docker build . -t frontend-example
+docker build . -t backend-example
+docker run -p 8000:8000 -it backend-example:latest
+docker run -p 5000:5000 -it frontned-example:latest
