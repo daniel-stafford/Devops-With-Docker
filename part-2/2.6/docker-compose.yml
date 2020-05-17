@@ -1,0 +1,35 @@
+version: "3.5"
+
+services:
+  db:
+    image: postgres
+    restart: unless-stopped
+    environment:
+      - POSTGRES_PASSWORD=example
+      - POSTGRES_USER=dstafford
+    container_name: db_ex2.6
+    volumes:
+      - database:/var/lib/postgresql/data
+  frontend:
+    build: ./frontend-example-docker
+    ports:
+      - 5000:5000
+  redis:
+    image: redis:alpine
+    ports:
+      - 6379:6379
+  backend:
+    build: ./backend-example-docker
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
+    environment:
+      - REDIS=redis
+      - REDIS_PORT=6379
+      - DB_USERNAME=dstafford
+      - DB_PASSWORD=example
+      - DB_HOST=db
+
+volumes:
+  database:
